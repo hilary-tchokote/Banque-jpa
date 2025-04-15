@@ -2,6 +2,7 @@ package fr.esaip.tthc;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
 public class ConnexionJpa {
@@ -11,7 +12,7 @@ public class ConnexionJpa {
 
         EntityManager em = emf.createEntityManager();
 
-        //EntityTransaction et = em.getTransaction();
+        EntityTransaction et = em.getTransaction();
 
 
         System.out.println("em");
